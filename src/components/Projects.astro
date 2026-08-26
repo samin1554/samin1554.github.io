@@ -1,0 +1,24 @@
+---
+import Section from "./Section.astro";
+import ProjectCard from "./ProjectCard.astro";
+import { projects } from "../data/projects";
+
+const featured = projects.filter((p) => p.featured);
+const rest = projects.filter((p) => !p.featured);
+---
+
+<Section id="projects" eyebrow="01 / Work" title="Projects">
+  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {featured.map((project) => <ProjectCard project={project} />)}
+  </div>
+
+  {
+    rest.length > 0 && (
+      <div class="mt-5 grid gap-5 sm:grid-cols-2">
+        {rest.map((project) => (
+          <ProjectCard project={project} />
+        ))}
+      </div>
+    )
+  }
+</Section>

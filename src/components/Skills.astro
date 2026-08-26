@@ -1,0 +1,62 @@
+---
+import { profile } from "../data/profile";
+import { skills, certifications } from "../data/skills";
+---
+
+<section id="about" class="border-y border-line bg-surface/40">
+  <div class="mx-auto max-w-5xl px-5 py-16 sm:px-8 sm:py-20">
+    <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
+      <div class="reveal">
+        <p class="font-mono text-xs font-medium uppercase tracking-widest text-accent">
+          05 / Toolbox
+        </p>
+        <h2 class="mt-2 text-2xl font-bold tracking-tight text-fg sm:text-3xl">
+          Skills & Education
+        </h2>
+
+        <div class="mt-6 rounded-xl border border-line bg-bg p-5">
+          <p class="text-sm font-semibold text-fg">
+            {profile.education.school}
+          </p>
+          <p class="mt-1 text-sm text-muted">{profile.education.degree}</p>
+          <p class="mt-0.5 font-mono text-xs text-muted">
+            {profile.education.detail}
+          </p>
+        </div>
+
+        <div class="mt-5">
+          <p class="text-sm font-semibold text-fg">Certifications</p>
+          <ul class="mt-2 space-y-1.5">
+            {
+              certifications.map((c) => (
+                <li class="flex gap-2 text-sm text-muted">
+                  <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent" />
+                  {c}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal space-y-6">
+        {
+          skills.map((group) => (
+            <div>
+              <p class="font-mono text-xs uppercase tracking-wider text-muted">
+                {group.label}
+              </p>
+              <ul class="mt-2.5 flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <li class="rounded-lg border border-line bg-bg px-3 py-1.5 text-sm text-fg">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

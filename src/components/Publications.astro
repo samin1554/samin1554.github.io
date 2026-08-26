@@ -1,0 +1,44 @@
+---
+import Section from "./Section.astro";
+import Icon from "./Icon.astro";
+import { publications, scholarUrl, scholarInterests } from "../data/publications";
+---
+
+<Section id="publications" eyebrow="04 / Research" title="Publications">
+  <div class="reveal mb-6 flex flex-wrap items-center gap-2">
+    {
+      scholarInterests.map((i) => (
+        <span class="rounded-full border border-line px-3 py-1 text-xs text-muted">
+          {i}
+        </span>
+      ))
+    }
+    <a
+      href={scholarUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="ml-auto inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline"
+    >
+      <Icon name="scholar" class="h-4 w-4" />
+      Full Google Scholar profile
+    </a>
+  </div>
+
+  <ol class="reveal divide-y divide-line rounded-xl border border-line">
+    {
+      publications.map((pub) => (
+        <li class="flex items-start gap-4 p-4">
+          <span class="mt-0.5 w-10 shrink-0 font-mono text-sm text-muted">
+            {pub.year}
+          </span>
+          <p class="flex-1 text-sm leading-relaxed text-fg">{pub.title}</p>
+          {pub.citations && (
+            <span class="shrink-0 rounded-md bg-surface-2 px-2 py-0.5 font-mono text-[11px] text-muted">
+              {pub.citations} cite{pub.citations > 1 ? "s" : ""}
+            </span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</Section>

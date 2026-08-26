@@ -1,0 +1,94 @@
+---
+import Icon from "./Icon.astro";
+import { profile } from "../data/profile";
+
+const iconFor = { github: "github", linkedin: "linkedin", scholar: "scholar", mail: "mail" } as const;
+
+// Drop an impressionist painting at public/hero-bg.png (or .jpg) and it appears
+// behind the hero. Until then it hides itself and the grid shows through.
+const HERO_IMAGE = "/hero-bg.jpg";
+---
+
+<section
+  id="top"
+  class="relative mx-auto max-w-5xl px-5 pb-8 pt-20 sm:px-8 sm:pt-28"
+>
+  <!-- optional painterly photo, layered behind the grid; hides if file absent -->
+  <img
+    src={HERO_IMAGE}
+    alt=""
+    aria-hidden="true"
+    onerror="this.style.display='none'"
+    class="pointer-events-none absolute inset-x-0 top-0 -z-20 h-[460px] w-full object-cover opacity-[0.18] dark:opacity-30"
+    style="-webkit-mask-image: linear-gradient(to bottom, #000 40%, transparent 100%); mask-image: linear-gradient(to bottom, #000 40%, transparent 100%);"
+  />
+
+  <!-- background: tiling grid image + soft accent glow, faded out toward the page -->
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[460px]"
+    style="
+      background-image:
+        radial-gradient(70% 90% at 50% -10%, var(--color-accent-soft) 0%, transparent 70%),
+        url('/grid.svg');
+      background-repeat: no-repeat, repeat;
+      background-size: 100% 100%, 44px 44px;
+      -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+    "
+  >
+  </div>
+
+  <p class="font-mono text-sm text-muted">
+    Hi, I'm <span class="text-fg">{profile.fullName}</span>. I go by Sam.
+  </p>
+
+  <h1
+    class="mt-4 max-w-3xl text-4xl font-extrabold leading-[1.1] tracking-tight text-fg sm:text-5xl md:text-6xl"
+  >
+    {profile.tagline}
+  </h1>
+
+  <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+    {profile.bio}
+  </p>
+
+  <div class="mt-8 flex flex-wrap items-center gap-3">
+    <a
+      href="#projects"
+      class="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-accent-fg transition-transform hover:-translate-y-0.5"
+    >
+      View my work
+      <Icon name="arrow" class="h-4 w-4 rotate-90" />
+    </a>
+    <a
+      href={profile.resumeHref}
+      class="inline-flex items-center gap-2 rounded-lg border border-line px-5 py-2.5 text-sm font-semibold text-fg transition-colors hover:border-accent hover:text-accent"
+    >
+      <Icon name="resume" class="h-4 w-4" />
+      Résumé
+    </a>
+  </div>
+
+  <ul class="mt-8 flex flex-wrap items-center gap-2">
+    {
+      profile.socials.map((s) => (
+        <li>
+          <a
+            href={s.href}
+            target={s.icon === "mail" ? undefined : "_blank"}
+            rel={s.icon === "mail" ? undefined : "noopener noreferrer"}
+            aria-label={s.label}
+            class="grid h-10 w-10 place-items-center rounded-lg border border-line text-muted transition-colors hover:border-accent hover:text-accent"
+          >
+            <Icon name={iconFor[s.icon]} class="h-5 w-5" />
+          </a>
+        </li>
+      ))
+    }
+    <li class="ml-1 flex items-center gap-1.5 text-sm text-muted">
+      <span class="inline-block h-2 w-2 rounded-full bg-emerald-500"></span>
+      {profile.location}
+    </li>
+  </ul>
+</section>
