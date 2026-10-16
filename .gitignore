@@ -25,3 +25,9 @@ pnpm-debug.log*
 
 # local Claude Code skills — kept out of the public repo
 .claude/
+
+# asset pipeline inputs and scratch (see ASSETS.md); never publish these
+public/assets/refs/
+public/assets/cutouts/
+public/assets/debug/
+.venv/
