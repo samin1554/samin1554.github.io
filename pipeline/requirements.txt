@@ -1,0 +1,7 @@
+rembg[cpu]==2.0.67
+onnxruntime
+opencv-python-headless
+pillow
+numpy
+torch
+transformers

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curriculum Vitae ✦ Samiul</title>
+<meta name="description" content="Résumé of Sayed Amin: software engineer, CSUSB Computer Science & Mathematics.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="curriculum.css">
+<script type="importmap">
+  { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+  } }
+</script>
+</head>
+<body class="cv-page">
+
+<header class="topbar">
+  <a class="brand" href="index.html">Samiul<span>✦</span><em data-la="Curriculum vitae">Curriculum vitae</em></a>
+  <nav class="nav">
+    <a href="index.html#i2" data-la="Opera">Works</a>
+    <a href="index.html#i3" data-la="Capitula">Chapters</a>
+    <a href="index.html#i4" data-la="Codex">Codex</a>
+    <a href="index.html#i5" data-la="Epistulae">Letters</a>
+  </nav>
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="la" aria-pressed="false">LA</button>
+    </div>
+  </div>
+</header>
+
+<!-- fixed poster behind the scroll -->
+<section class="issue i6 cv-bg" aria-hidden="true" data-fig="6" data-fh=".94" data-fb="0" data-fx="-.24" data-amp=".12" data-exp=".72" data-tint="#1a0202" data-light="#ff3a2e">
+  <div class="stage">
+    <div class="bg"><video muted loop playsinline preload="metadata" poster="assets/video/bg-6.jpg" data-src="assets/video/bg-6.mp4"></video></div>
+    <img class="still" src="assets/web/6.webp" alt="">
+    <canvas class="gl"></canvas>
+    <div class="quote" data-la="Usque ad<br>mortem omnis<br>clades<br>animi est">Until<br>death all<br>defeat is<br>psychological</div>
+    <div class="num l">Nº VI</div>
+    <div class="vignette"></div><div class="grain"></div>
+  </div>
+</section>
+
+<main class="cv-wrap">
+  <article class="scroll" id="scroll" data-cap=".74">
+    <div class="roller top" aria-hidden="true"></div>
+    <div class="sheet">
+      <div class="sheet-inner">
+        <header class="cv-head">
+          <div class="kicker" data-la="Curriculum vitae · Nº VI">Curriculum vitae · Nº VI</div>
+          <h1>Sayed Amin</h1>
+          <p class="contact">San Bernardino, CA <span>✦</span> <a href="https://github.com/samin1554">github.com/samin1554</a> <span>✦</span> <a href="mailto:samiul27a@gmail.com">samiul27a@gmail.com</a></p>
+          <div class="rule" aria-hidden="true"><i></i>✦<i></i></div>
+        </header>
+
+        <section>
+          <h2 data-la="Educatio">Education</h2>
+          <div class="entry">
+            <div class="row"><b>California State University, San Bernardino</b><span>Expected Spring 2028</span></div>
+            <div class="row sub"><i>B.S. in Computer Science &amp; Mathematics</i><span>GPA <mark>3.4</mark></span></div>
+          </div>
+        </section>
+
+        <section>
+          <h2 data-la="Experientia">Experience</h2>
+          <div class="entry">
+            <div class="row"><b>Software Engineering Intern</b><span>June 2026 – July 2026</span></div>
+            <div class="row sub"><i>Murphy USA (Fortune 500)</i><span>El Dorado, AR</span></div>
+            <ul>
+              <li>Built a C#/.NET integration solution from scratch to replace legacy SnapLogic pipelines, developing internal financial tooling used by the Financial Systems team to process <mark>10K+</mark> invoices, purchase orders, and transactions monthly</li>
+              <li>Engineered validation queries against IBM i (AS400) DB2 tables across <mark>3 databases</mark> to identify incorrect POs across systems, enabling the business to proactively resolve <mark>500+</mark> inaccurate customer records</li>
+              <li>Redesigned an automated JD Edwards Orchestrator workflow with <mark>12</mark> custom and sub-orchestrations, writing smart validation logic in JRuby/Ruby on Rails to abstract corrupted and blank data and surface clearer logs for end users, cutting manual data cleanup by <mark>6 hrs/week</mark></li>
+              <li>Built an Azure DevOps CI/CD pipeline in YAML that automatically generates user-story tickets for bugs and triggers automated test runs on every push, saving <mark>~5 hrs/week</mark> of manual QA</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="row"><b>Undergraduate Research Assistant</b><span>2025 – Spring 2026</span></div>
+            <div class="row sub"><i>Southern Arkansas University</i><span>Magnolia, AR</span></div>
+            <ul>
+              <li>Conducted comparative computer vision research benchmarking VGG16, ViT, ChatGPT, and Claude on a 4-class image classification dataset of <mark>12,000+</mark> images, evaluating models using IoU and accuracy metrics; top model achieved <mark>92%</mark> accuracy</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="row"><b>Research Assistant</b><span>May 2024 – July 2024</span></div>
+            <div class="row sub"><i>University of Hawai‘i Cancer Center</i><span>Honolulu, HI</span></div>
+            <ul>
+              <li>Built Python pipelines to scrape and process <mark>5K+</mark> TikTok posts on oral nicotine products, engineering validation logic that ensured <mark>99%</mark> data consistency across <mark>4</mark> heterogeneous sources, eliminating <mark>~10 hrs/week</mark> of manual review</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 data-la="Opera">Projects</h2>
+          <div class="entry">
+            <div class="row"><b>OpenBook — NotebookLM Clone</b></div>
+            <div class="stack">Java, Spring Boot, FastAPI, React, TypeScript, pgvector, RabbitMQ, MinIO, Docker, Stripe</div>
+            <ul>
+              <li>Architected a <mark>6-service</mark> Java/Spring Boot microservices platform for RAG-powered document Q&amp;A (pgvector + LLaMA 3.3 70B), handling <mark>1,000+</mark> documents with p95 query latency under <mark>3s</mark></li>
+              <li>Built event-driven RabbitMQ messaging, async podcast generation (<mark>15-min</mark> audio from <mark>50-page</mark> documents), and Stripe subscription billing</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="row"><b>TechGenie — AI Career Toolkit</b></div>
+            <div class="stack">Next.js, TypeScript, React, FastAPI, PostgreSQL, OAuth2, Stripe, Vercel, Railway</div>
+            <ul>
+              <li>Built a full-stack SaaS platform used by <mark>200+</mark> users, with a RESTful API backend, JWT auth, GitHub/Google OAuth2, Stripe billing, and PostgreSQL JSONB caching across distributed infrastructure</li>
+              <li>Integrated the JSearch API to surface real-time job listings from LinkedIn, Indeed, and Glassdoor, with <mark>5,000+</mark> listings and <mark>sub-2s</mark> response times</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="row"><b>Life OS — Multi-Agent AI System</b></div>
+            <div class="stack">Next.js, FastAPI, LangGraph, PostgreSQL, ChromaDB, Redis, Clerk</div>
+            <ul>
+              <li>Architected a <mark>12-agent</mark> LangGraph orchestration system with ChromaDB semantic memory, Gmail OAuth integration, and BYOK support across <mark>9</mark> LLM providers, executing <mark>500+</mark> multi-step tasks with a <mark>95%</mark> completion rate</li>
+              <li>Built file generation capabilities (DOCX, XLSX, PDF), with <mark>150+</mark> documents generated</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 data-la="Fons apertus">Open Source</h2>
+          <ul class="plain">
+            <li><b>Notte</b> — designed and implemented prefix-based model validation for LLM provider integration, addressing a maintainer-identified architecture gap (repo: <mark>1K+★</mark>)</li>
+            <li><b>Hermes Agent (Nous Research)</b> — added a semantic-scholar research skill covering <mark>9</mark> API endpoint types, closing a documented gap in the existing arxiv skill</li>
+            <li><b>JavaScript Mastery Pro</b> — fixed a missing await on a Mongoose findOneAndUpdate call causing an unresolved Promise in a POST handler (merged into a <mark>20K★</mark> repo)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 data-la="Artes">Technical Skills</h2>
+          <dl class="skills">
+            <dt>Languages</dt><dd>Java, Python, TypeScript, JavaScript, C#, Go</dd>
+            <dt>Frameworks</dt><dd>Spring Boot, React, Next.js, FastAPI</dd>
+            <dt>Backend &amp; Systems</dt><dd>REST APIs, Microservices, Distributed Systems, OAuth2, JWT, Event-Driven Architecture, CI/CD</dd>
+            <dt>Databases &amp; Infrastructure</dt><dd>PostgreSQL, MongoDB, Redis, Docker, RabbitMQ, Azure DevOps, GitHub Actions</dd>
+            <dt>AI/ML</dt><dd>PyTorch, TensorFlow, LangGraph, Transformers</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h2 data-la="Testimonia">Certifications</h2>
+          <ul class="certs">
+            <li>AI Fluency for Builders <span>Anthropic</span></li>
+            <li>Claude Code in Action <span>Anthropic</span></li>
+            <li>Fundamentals of Agents <span>Hugging Face</span></li>
+            <li>SWE Intern Certification <span>HackerRank</span></li>
+          </ul>
+        </section>
+
+        <footer class="cv-foot">
+          <a class="pdf" href="assets/Sam_Amin_Resume.pdf" target="_blank" rel="noopener" data-la="Curriculum vitae usitatum · PDF ↗">Standard résumé · PDF ↗</a>
+          <div class="finis">Finis ✦ MMXXVI</div>
+        </footer>
+      </div>
+    </div>
+    <div class="roller bottom" aria-hidden="true"></div>
+    <div class="cord">
+      <span class="line" aria-hidden="true"></span>
+      <div class="tassel" role="slider" tabindex="0" aria-label="Pull the cord to unroll the résumé" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="knot"></span><span class="fringe"></span></div>
+      <span class="hint" data-la="trahe funiculum ↓">pull the cord ↓</span>
+    </div>
+  </article>
+</main>
+
+<!-- keep going past the scroll, straight into the letters -->
+<section class="cv-letters">
+  <div class="hello" data-la="Salve.">Say hello.</div>
+  <p data-la="Munera quaero in machinatione programmatum, et semper libenter colloquor.">I'm looking for software engineering internships and new-grad roles, and I'm always happy to chat.</p>
+  <ul class="links">
+    <li><a href="mailto:samiul27a@gmail.com">samiul27a@gmail.com ↗</a></li>
+    <li><a href="https://github.com/samin1554">GitHub ↗</a></li>
+    <li><a href="index.html#i5" data-la="Ad epistulas ↗">The Letters issue ↗</a></li>
+  </ul>
+</section>
+
+<script type="module" src="main.js"></script>
+<script type="module" src="scroll.js"></script>
+</body>
+</html>

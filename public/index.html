@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Samiul ✦ Codex</title>
+<meta name="description" content="Sam Amin, software engineer: full-stack systems, research and open source.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Federant&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;600;800&family=Pinyon+Script&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="curriculum.css">
+<script type="importmap">
+  { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+  } }
+</script>
+</head>
+<body>
+
+<div id="boot" aria-hidden="true">
+  <canvas class="boot-gl"></canvas>
+  <div class="boot-words">
+    <div class="boot-motto">Scientia infinita est</div>
+    <small data-la="tange ut praetereas">click to skip</small>
+  </div>
+</div>
+
+<header class="topbar">
+  <a class="brand" href="#i1">Samiul<span>✦</span><em data-la="Codex · Nº I–VII">Codex · Issues I–VII</em></a>
+  <nav class="nav">
+    <a href="#i2" data-la="Opera">Works</a>
+    <a href="#i3" data-la="Capitula">Chapters</a>
+    <a href="#i4" data-la="Codex">Codex</a>
+    <a href="#cv" data-la="Vita">CV</a>
+    <a href="#i5" data-la="Epistulae">Letters</a>
+  </nav>
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="la" aria-pressed="false">LA</button>
+    </div>
+    <button type="button" class="pill" id="toRecruiter"><i></i><span data-la="Modus conductoris">Recruiter mode</span></button>
+  </div>
+</header>
+
+<main id="codex">
+
+  <!-- I · hero · Sacrifice -->
+  <section class="issue i1" id="i1" data-fig="1" data-fh=".9" data-fb="0" data-fx=".03" data-amp=".12" data-exp=".78" data-tint="#2a0f06" data-light="#ffb072">
+    <div class="stage">
+      <div class="bg"><video muted loop playsinline preload="metadata" poster="assets/video/bg-1.jpg" data-src="assets/video/bg-1.mp4"></video></div>
+      <div class="title"><span class="title-text" data-la="SAMIUL">SAMIUL</span></div>
+      <img class="still" src="assets/web/1.webp" alt="A winged archangel in armour, sword raised, over a fallen figure">
+      <canvas class="gl" aria-hidden="true"></canvas>
+      <div class="script">Amin</div>
+      <div class="num l" data-la="X · XV">10.15</div>
+      <div class="num r" data-la="MMXXVI">’26</div>
+      <div class="vert r" data-la="Plenus acervus ✦ Systemata ✦ Investigatio ✦ Fons apertus">Full-stack ✦ Systems ✦ Research ✦ Open source</div>
+      <svg class="spark s1" viewBox="0 0 40 40" aria-hidden="true"><use href="#star"/></svg>
+      <svg class="spark s2" viewBox="0 0 40 40" aria-hidden="true"><use href="#star"/></svg>
+      <div class="vignette"></div><div class="grain"></div>
+    </div>
+    <div class="hud">
+      <div class="tag" data-la="Artifex programmatum">Software engineer</div>
+      <div class="motto">
+        <div class="la">Scientia infinita est</div>
+        <div class="gloss" data-la="Nº I · liber de systematibus">Knowledge is endless</div>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="#i2" data-la="Opera vide ↓">View the works ↓</a>
+        <a class="btn" href="#cv" data-la="Curriculum vitae">Résumé</a>
+      </div>
+      <div class="music" id="music">
+        <button class="play" id="play" type="button" aria-label="Play">
+          <svg viewBox="0 0 14 14" id="playIcon"><path d="M3 1.5 L12 7 L3 12.5 Z"/></svg>
+        </button>
+        <div>
+          <div class="lab" data-la="✦ Nunc canitur">✦ Now chanting</div>
+          <div class="tt">Miserere mei, Deus</div>
+          <div class="by">G. Allegri · 1638 · synth preview</div>
+        </div>
+        <div class="row"><span id="t">0:00</span><div class="bar"><i id="prog"></i></div><span>4:12</span><div class="eq"><b></b><b></b><b></b><b></b></div></div>
+      </div>
+      <p class="micro" data-la="Corpus systematum de officiis, fluminibus datorum et canalibus quae sub opere vivo latent. In turma Fortunae D aedificavit, codici aperto contulit, investigationes edidit: adhuc tamen in initio itineris, ut severiores machinatores notarent.">a body of systems concerning the services, data flows, and pipelines behind a working product. Built on a Fortune 500 team, contributed to open source, and published in research, though the scholar remains early in the journey, as the more critical engineers would note.</p>
+      <div class="colophon">
+        <div class="barcode"><svg class="bars" viewBox="0 0 180 60" preserveAspectRatio="none" aria-hidden="true"></svg><span>978-0-SAM-2026</span></div>
+        <div class="pa" data-la="<div class='a'>Monitum</div><div class='b'>Cave</div><div class='c'>Continet Java</div>">
+          <div class="a">Parental</div><div class="b">Advisory</div><div class="c">Contains Java</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- II · works · Emperor -->
+  <section class="issue i2" id="i2" data-fig="3" data-fh=".96" data-fb="0" data-fx="0" data-amp=".1" data-exp=".85" data-tint="#2a0306" data-light="#ff4a3a">
+    <div class="stage">
+      <div class="bg"><video muted loop playsinline preload="none" poster="assets/video/bg-2.jpg" data-src="assets/video/bg-2.mp4"></video></div>
+      <div class="redband"></div>
+      <div class="oval l" data-la="Opera">Works</div><div class="oval r">MMXXVI</div>
+      <div class="kicker" aria-hidden="true">Medieval ✦ Imperium</div>
+      <div class="title"><span class="title-text" data-la="Opera">Works</span></div>
+      <img class="still" src="assets/web/3.webp" alt="A crowned dark figure raising one hand">
+      <canvas class="gl" aria-hidden="true"></canvas>
+      <svg class="orn l" viewBox="0 0 40 160" aria-hidden="true"><use href="#ornament"/></svg>
+      <svg class="orn r" viewBox="0 0 40 160" aria-hidden="true"><use href="#ornament"/></svg>
+      <div class="vignette"></div><div class="grain"></div>
+    </div>
+    <div class="hud">
+      <article class="opus o1">
+        <div class="no" data-la="Opus I">Work I</div>
+        <h3>OpenBook</h3>
+        <p class="sub" data-la="Liber apertus · interrogationes documentorum per RAG">NotebookLM clone · RAG document Q&amp;A</p>
+        <p>Six Spring Boot microservices for RAG Q&amp;A (pgvector + LLaMA 3.3 70B): <mark>1,000+</mark> docs at p95 <mark>&lt;3s</mark>, RabbitMQ events, <mark>15-min</mark> podcasts, Stripe.</p>
+        <ul><li>Java</li><li>Spring Boot</li><li>pgvector</li><li>RabbitMQ</li><li>MinIO</li></ul>
+      </article>
+      <article class="opus o2">
+        <div class="no" data-la="Opus II">Work II</div>
+        <h3>TechGenie</h3>
+        <p class="sub" data-la="Genius technicus · instrumenta curriculi">AI career toolkit · deployed SaaS</p>
+        <p>Used by <mark>200+</mark> people: GitHub analysis, ATS résumés and live job matching over <mark>5,000+</mark> listings at <mark>sub-2s</mark>. JWT + OAuth2, Stripe. <a href="https://techgenie.cc">techgenie.cc</a></p>
+        <ul><li>Next.js</li><li>FastAPI</li><li>PostgreSQL</li><li>OAuth2</li></ul>
+      </article>
+      <article class="opus o3">
+        <div class="no" data-la="Opus III">Work III</div>
+        <h3>Life OS</h3>
+        <p class="sub" data-la="Systema vitae · duodecim agentes">Multi-agent AI system</p>
+        <p>A 12-agent LangGraph orchestration with ChromaDB memory and BYOK across 9 LLM providers: <mark>500+</mark> multi-step tasks at <mark>95%</mark> completion, <mark>150+</mark> documents generated.</p>
+        <ul><li>LangGraph</li><li>ChromaDB</li><li>Redis</li><li>Clerk</li></ul>
+      </article>
+      <article class="opus o4">
+        <div class="no" data-la="Opus IV · in fabrica">Work IV · in progress</div>
+        <h3>Inland Resilience</h3>
+        <p class="sub" data-la="Ignes silvestres · responsa cum testimoniis">Evidence-backed wildfire analysis</p>
+        <p>Draw an area, ask a question, get a cited answer from satellite imagery and official sources for San Bernardino County.</p>
+        <ul><li>Go</li><li>LangGraph</li><li>MapLibre</li><li>PostGIS</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- III · chapters · Judgement -->
+  <section class="issue i3" id="i3" data-fig="2" data-fh=".84" data-fb="0" data-fx="0" data-amp=".14" data-exp=".8" data-tint="#031214" data-light="#8fe6e0">
+    <div class="stage">
+      <div class="bg"><video muted loop playsinline preload="none" poster="assets/video/bg-3.jpg" data-src="assets/video/bg-3.mp4"></video></div>
+      <div class="shafts"></div>
+      <div class="corner tl">HDR · CODEX</div><div class="corner tr">HDR · CODEX</div>
+      <div class="for" data-la="ad">for</div>
+      <div class="title"><span class="title-text" data-la="Capitula">Chapters</span></div>
+      <img class="still" src="assets/web/2.webp" alt="A figure in an ornate porcelain mask and crown, one hand raised">
+      <canvas class="gl" aria-hidden="true"></canvas>
+      <div class="corner bl" data-la="Capitula III · MMXXIV–MMXXVI">Chapters III · 2024–2026</div>
+      <div class="corner br" data-la="Episodium LI">Episode 051</div>
+      <div class="vignette"></div><div class="grain"></div>
+    </div>
+    <div class="hud">
+      <article class="chap c1">
+        <h3><span data-la="Capitulum I">Chapter I</span> · Murphy USA</h3>
+        <p class="when">Software Engineering Intern · Fortune 500 · Jun–Jul 2026</p>
+        <p>A C# / .NET integration replacing SnapLogic for <mark>10K+</mark> invoices, POs and transactions a month. DB2 validation across 3 databases fixed <mark>500+</mark> records; a 12-orchestration JD Edwards redesign saved <mark>6 hrs/wk</mark>; Azure DevOps CI/CD saved <mark>~5 hrs/wk</mark> of QA.</p>
+      </article>
+      <article class="chap c2">
+        <h3><span data-la="Capitulum II">Chapter II</span> · Southern Arkansas University</h3>
+        <p class="when">Undergraduate Research Assistant · 2025–2026</p>
+        <p>Benchmarked VGG16, ViT, ChatGPT and Claude on <mark>12,000+</mark> images across 4 classes, scored with IoU and accuracy; the top model hit <mark>92%</mark>.</p>
+      </article>
+      <article class="chap c3">
+        <h3><span data-la="Capitulum III">Chapter III</span> · UH Cancer Center</h3>
+        <p class="when">Research Assistant · Honolulu · May–Jul 2024</p>
+        <p>Python pipelines over <mark>5K+</mark> TikTok posts, holding <mark>99%</mark> consistency across 4 sources and cutting <mark>~10 hrs/wk</mark> of manual review.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- IV · codex · Midra -->
+  <section class="issue i4" id="i4" data-fig="4" data-fh=".8" data-fb=".03" data-fx=".07" data-amp=".12" data-exp=".82" data-tint="#1a1003" data-light="#ffbf4a">
+    <div class="stage">
+      <div class="bg"><video muted loop playsinline preload="none" poster="assets/video/bg-4.jpg" data-src="assets/video/bg-4.mp4"></video></div>
+      <div class="frame"></div>
+      <div class="pre">Samiul · <span data-la="Scripta">Writings</span></div>
+      <div class="title"><span class="title-text">Codex</span></div>
+      <img class="still" src="assets/web/4.webp" alt="A gaunt figure with a head of flame, wrapped in a tattered gold robe">
+      <canvas class="gl" aria-hidden="true"></canvas>
+      <div class="lord" data-la="Libri<br>et fons<br>apertus">Papers<br>&amp; open<br>source</div>
+      <div class="vert l" data-la="Investigatio ✦ Sanitas digitalis ✦ Machinae discentes">Research ✦ Digital health ✦ Machine learning</div>
+      <div class="vignette"></div><div class="grain"></div>
+    </div>
+    <div class="hud">
+      <ol class="pubs">
+        <li><b>2026</b> Exploring #Zyn-related video content posted by Zynfluencers on TikTok</li>
+        <li><b>2026</b> An mHealth-based rural cardiac rehabilitation and smoking cessation system</li>
+        <li><b>2026</b> Virtual reality for childbirth induction: pain, anxiety and maternal experience</li>
+        <li><b>2025</b> Public engagement with lung cancer screening information on Reddit</li>
+        <li><b>2025</b> Intention to use mobile health apps in lung cancer treatment adherence</li>
+        <li><b>2025</b> Mobile app use for monitoring physical activity in Bangladeshi students</li>
+        <li><b>2024</b> University application distress: an Instagram-based investigation</li>
+        <li><b>2022</b> The impact of COVID-19 on the mental health of adolescents</li>
+        <li><b>2021</b> Is there an internet addiction escalating in COVID-19?</li>
+      </ol>
+      <div class="oss">
+        <p><b>Notte</b> · <mark>1K+★</mark> · prefix-based model validation for LLM provider integration</p>
+        <p><b>Hermes Agent</b> · Nous Research · Semantic Scholar skill covering 9 endpoint types</p>
+        <p><b>JavaScript Mastery Pro</b> · <mark>20K★</mark> · fixed an unresolved Mongoose promise (merged)</p>
+        <a class="btn" href="#" data-la="Index Scholaris ↗">Google Scholar ↗</a>
+      </div>
+      <p class="edu" data-la="Universitas Civitatis Californiae, San Bernardino · Baccalaureus Scientiae Computatralis et Mathematicae · GPA 3.4 · MMXXVIII">California State University, San Bernardino · B.S. Computer Science &amp; Mathematics · GPA 3.4 · expected Spring 2028</p>
+    </div>
+  </section>
+
+  <!-- VI · curriculum vitae · statues -->
+  <section class="issue i6 teaser" id="cv" data-fig="6" data-fh=".94" data-fb="0" data-fx="-.24" data-amp=".12" data-exp=".72" data-tint="#1a0202" data-light="#ff3a2e">
+    <div class="stage">
+      <div class="bg"><video muted loop playsinline preload="none" poster="assets/video/bg-6.jpg" data-src="assets/video/bg-6.mp4"></video></div>
+      <img class="still" src="assets/web/6.webp" alt="Two marble statues in red-tinted darkness, one arm raised">
+      <canvas class="gl" aria-hidden="true"></canvas>
+      <div class="quote" data-la="Usque ad<br>mortem omnis<br>clades<br>animi est">Until<br>death all<br>defeat is<br>psychological</div>
+      <div class="num l">Nº VI</div>
+      <div class="vignette"></div><div class="grain"></div>
+    </div>
+    <div class="hud">
+      <article class="scroll" data-from="curriculum.html" data-cap=".66">
+        <div class="roller top" aria-hidden="true"></div>
+        <div class="sheet"><div class="sheet-inner"></div></div>
+        <div class="roller bottom" aria-hidden="true"></div>
+        <div class="cord">
+          <span class="line" aria-hidden="true"></span>
+          <div class="tassel" role="slider" tabindex="0" aria-label="Pull the cord to unroll the résumé" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="knot"></span><span class="fringe"></span></div>
+          <span class="hint" data-la="trahe funiculum ↓">pull the cord ↓</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- V · letters · the eye -->
+  <section class="issue i5" id="i5" data-fig="5" data-fh=".9" data-fb="0" data-fx="0" data-amp=".12" data-exp=".8" data-tint="#020814" data-light="#9cc4ff" data-pyramid=".453,.154,.2225">
+    <div class="stage">
+      <div class="bg"><video muted loop playsinline preload="none" poster="assets/video/bg-5.jpg" data-src="assets/video/bg-5.mp4"></video></div>
+      <div class="title"><span class="title-text" data-la="Epistulae">Letters</span></div>
+      <img class="still" src="assets/web/5.webp" alt="A robed figure in dark water whose head is a black diamond with a single eye">
+      <canvas class="gl" aria-hidden="true"></canvas>
+      <div class="vert r">Scientia ✦ infinita ✦ est</div>
+      <div class="vignette"></div><div class="grain"></div>
+    </div>
+    <div class="hud">
+      <div class="hello" data-la="Salve.">Say hello.</div>
+      <p class="note" data-la="Munera quaero in machinatione programmatum, et semper libenter colloquor. Epistula vel LinkedIn via facillima est.">I'm looking for software engineering internships and new-grad roles, and I'm always happy to chat. Email or LinkedIn is the easiest way to reach me.</p>
+      <ul class="links">
+        <li><a href="https://github.com/samin1554">GitHub ↗</a></li>
+        <li><a href="#">LinkedIn ↗</a></li>
+        <li><a href="#">Google Scholar ↗</a></li>
+        <li><a href="mailto:samiul27a@gmail.com" data-la="Epistula ↗">Email ↗</a></li>
+        <li><a href="curriculum.html" data-la="Curriculum vitae ↗">Résumé scroll ↗</a></li>
+      </ul>
+      <div class="finis">FINIS<span>© MMXXVI · Sayed Mahmud Samiul Amin</span></div>
+    </div>
+  </section>
+</main>
+
+<section class="recruiter-view" aria-label="Recruiter mode">
+  <div class="rv-top"><b>samiul.dev</b><button type="button" id="toPoster">✦ Back to the codex</button></div>
+  <div class="rv">
+    <div class="hi">Hi, I'm Sayed Mahmud Samiul Amin. I go by Sam.</div>
+    <h1>I like building full-stack systems, and learning what holds them together.</h1>
+    <p>Computer Science &amp; Mathematics at CSU San Bernardino (GPA 3.4, Spring 2028). Software Engineering Intern at Murphy USA (Fortune 500), open-source contributor, and co-author on published research. <a href="mailto:samiul27a@gmail.com">samiul27a@gmail.com</a></p>
+    <a class="b p" href="/classic/">View my work</a><a class="b" href="curriculum.html">Résumé</a><a class="b" href="https://github.com/samin1554">GitHub</a><a class="b" href="/classic/">Full classic site →</a>
+  </div>
+</section>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="star" viewBox="0 0 40 40"><path d="M20 0 L21.4 16 L24 18.6 L40 20 L24 21.4 L21.4 24 L20 40 L18.6 24 L16 21.4 L0 20 L16 18.6 L18.6 16 Z"/></symbol>
+  <symbol id="ornament" viewBox="0 0 40 160">
+    <path d="M20 0 L22 24 L20 30 L18 24 Z M20 34 C26 40 26 48 20 54 C14 48 14 40 20 34 Z M8 70 L20 64 L32 70 L20 76 Z M20 80 L23 110 L20 160 L17 110 Z"/>
+    <circle cx="20" cy="94" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M4 94 H14 M26 94 H36" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+</svg>
+
+<script type="module" src="main.js"></script>
+<script type="module" src="scroll.js"></script>
+</body>
+</html>
